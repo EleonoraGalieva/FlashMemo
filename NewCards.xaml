@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashMemo.NewCards">
+    <ContentPage.Content>
+
+        <TableView 
+            Intent="Settings"
+            Margin="20"
+            HasUnevenRows="True"
+            x:Name="MainTable">
+            <TableView.Root>
+                <TableSection 
+                        Title="Новая карточка:"
+                        TextColor="LightSkyBlue"
+                      >
+                    <EntryCell 
+                            x:Name="NativeWord"
+                           Label="Слово на родном языке:"  
+                           Keyboard="Default"
+                           Placeholder="Лодка, машина..."
+                            LabelColor="Gray"
+                            HorizontalTextAlignment="Start"
+                       Completed="NativeWord_Completed"
+                          />
+                    <EntryCell
+                            x:Name="ForeignWord"
+                            Label="На иностранном:"
+                            Keyboard="Default"
+                            Placeholder="Boat,car..."
+                            LabelColor="Gray"
+                            HorizontalTextAlignment="Start"
+                            />
+                    <ViewCell
+                        x:Name="ForButtons"
+                        Height="120">
+                        <StackLayout Margin="0,0,0,0"
+                                     Spacing="7"
+                                 >
+                            <Button x:Name="ButtonForAdding"
+                                    HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="LightSkyBlue"
+                    CornerRadius="10"
+                    Clicked="ButtonForAdding_Clicked" 
+                    Text="Добавить карточку"
+                          />
+                            <Button x:Name="Start"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="LightSkyBlue"
+                    CornerRadius="10"
+                    Clicked="Start_Clicked"
+                    Text="Начать учить!"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlashMemo"
+             x:Class="FlashMemo.MainPage"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"  
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"  
+             xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
+
+    <StackLayout Orientation="Vertical" 
+                 BackgroundColor="Transparent"
+                 
+                 Padding="25"
+                 Spacing="15"
+    >
+        <!-- Place new controls here -->
+
+        <Label Text="Hi, welcome to Flash Memo!"
+               TextColor="Gray"
+               FontAttributes="Bold"
+               FontSize="Large"
+               HorizontalOptions="CenterAndExpand"
+        />
+        <forms:AnimationView 
+	            x:Name="animationView" 
+	            Animation="3151-books.json" 
+	            Loop="True" 
+	            AutoPlay="True"
+                BackgroundColor="Transparent"
+                HeightRequest="150"
+                WidthRequest="200"/>
+        <Button x:Name ="Button1"                  
+                BackgroundColor="LightSkyBlue"
+                HorizontalOptions="FillAndExpand"
+                Text="Использовать готовый набор"
+                CornerRadius="10"
+                Margin="0,60,0,0" 
+                Clicked="Button1_Clicked"
+        />
+        <Button x:Name ="Button2"
+                BackgroundColor="LightSkyBlue"
+                HorizontalOptions="FillAndExpand"
+                Text="Создать новый набор"
+                Clicked="Button2_Clicked" 
+                CornerRadius="10"                   
+        />
+        <Button x:Name ="Button3" 
+                BackgroundColor="LightSkyBlue"
+                HorizontalOptions="FillAndExpand"
+                Text="Скачать карточки" 
+                CornerRadius="10"  
+        />
+        <Button x:Name ="Button4" 
+                BackgroundColor="LightSkyBlue"
+                HorizontalOptions="FillAndExpand"
+                Text="Настройки"   
+                CornerRadius="10" 
+                Clicked="Button4_Clicked"
+        />
+
+    </StackLayout>
+
+
+</ContentPage>
